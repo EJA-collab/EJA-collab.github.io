@@ -1,0 +1,173 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  width: auto;
+  z-index: 100;
+  color: white;
+  margin-right: .5rem;
+  padding: 100px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15%;
+  grid-template-areas:
+  ". . head head . ."
+  ". con con con con ."
+  "edu edu edu pro pro pro"
+  ". . . . . ."
+  ". . . . . ."
+  ". . . . . ."
+  ". info info info info .";
+}
+
+header {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+  border: 3px solid #DCD0FF;
+  border-radius: 3px;
+  padding: 1rem;
+  text-wrap:
+}
+
+section {
+  background-color: #333;
+  border: 3px solid #DCD0FF;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: con;
+}
+
+ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.contact li {
+    list-style-type: none;
+    display: block;
+}
+
+.pro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-area: pro;
+}
+
+.edu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-area: edu;
+}
+
+.info {
+  grid-area: info;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 1rem;;
+  background-color: #DCD0FF;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1080px) {
+  main {
+    font-size: .5em;
+  }
+  .info {
+    font-size: 1.1em;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul li {
+    margin-bottom: 1em;
+  }
+  span {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    font-size: .75em;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  main {
+    grid-template-areas:
+    ". . head head . ."
+    ". con con con con ."
+    "edu edu edu pro pro pro"
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". info info info info .";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-column-gap: 5%;
+    grid-row-gap: 15%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  main {
+    grid-row-gap: 15%;
+    grid-template-areas:
+    ". head head head head ."
+    ". con con con con ."
+    ". edu edu edu edu ."
+    ". pro pro pro pro ."
+    ". info info info info .";
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  ul li {
+    margin-bottom: 1em;
+  }
+  span {
+    margin-bottom: 1em;
+  }
+}
